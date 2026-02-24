@@ -1,47 +1,673 @@
 <!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Lbee développement</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lbee Développement | Création de produits digitaux utiles</title>
+    <meta
+      name="description"
+      content="Lbee Développement accompagne startups, entrepreneurs et associations dans la conception, le développement et l'évolution de produits digitaux utiles, utilisables et alignés avec leurs objectifs."
+    />
+    <meta
+      name="keywords"
+      content="développement web, produit digital, startup, application web, audit technique, UX UI, freelance, Lbee Développement"
+    />
+    <meta name="author" content="Lbee Développement" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://example.com/" />
 
-    <!-- Font: Sora -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <!-- Open Graph -->
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Lbee Développement | Création de produits digitaux utiles" />
+    <meta
+      property="og:description"
+      content="J’aide startups, entrepreneurs et associations à concevoir des applications utiles, utilisables et alignées avec leurs objectifs."
+    />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:site_name" content="Lbee Développement" />
+    <meta property="og:image" content="assets/images/og-cover.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lbee Développement | Création de produits digitaux utiles" />
+    <meta
+      name="twitter:description"
+      content="Audit produit & technique, conception de produit digital, évolution de 1ère version."
+    />
+    <meta name="twitter:image" content="assets/images/og-cover.jpg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-            href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap"
-            rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
     />
 
-    <style>
-        html,
-        body {
-            height: 100%;
-            margin: 0;
+    <link rel="icon" href="assets/images/favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- JSON-LD (minimal SEO foundation) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Lbee Développement",
+        "url": "https://example.com/",
+        "description": "Conception, développement et évolution de produits digitaux pour startups, entrepreneurs et associations.",
+        "areaServed": "France",
+        "serviceType": ["Développement web", "Audit produit & technique", "Conception de produit digital"],
+        "sameAs": []
+      }
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
+
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Retour à l'accueil">Lbee Développement</a>
+
+        <nav class="site-nav" aria-label="Navigation principale">
+          <ul class="nav-list">
+            <li><a href="#experiences">Expériences &amp; projets</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Comment ça fonctionne ?</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Ouvrir le menu"
+        >
+          <span class="nav-toggle__line"></span>
+          <span class="nav-toggle__line"></span>
+          <span class="nav-toggle__line"></span>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="mobile-menu" hidden>
+        <nav class="mobile-nav container" aria-label="Navigation mobile">
+          <ul class="mobile-nav-list">
+            <li><a href="#experiences">Expériences &amp; projets</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Comment ça fonctionne ?</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container hero__layout">
+          <div class="hero__text">
+            <h1 class="hero__title">
+              De l’idée au <span class="text-gradient">produit digital</span> réussi
+            </h1>
+            <p class="hero__subtitle">
+              J’aide startups, entrepreneurs et associations à concevoir des applications
+              utiles, utilisables et alignées avec leurs objectifs.
+            </p>
+            <a class="button button--primary" href="#experiences">Découvrir</a>
+          </div>
+
+          <div class="hero__visual">
+            <img
+              src="assets/images/hero-portrait.png"
+              alt="Portrait du fondateur de Lbee Développement"
+              width="640"
+              height="640"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Experiences -->
+      <section class="section section--white" id="experiences" aria-labelledby="experiences-title">
+        <div class="container">
+          <header class="section-header">
+            <h2 id="experiences-title" class="section-title">Expériences &amp; projets</h2>
+          </header>
+
+          <div class="projects-grid">
+            <a
+              class="project-card project-card--link"
+              href="projects/decision-energetique"
+              aria-label="Voir le projet : Projet application web de décision énergétique"
+            >
+              <img
+                class="project-card__image"
+                src="assets/images/projects/decision-energetique.png"
+                alt="Projet application web de décision énergétique"
+                width="560"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="project-card__body">
+                <h3 class="project-card__title">
+                  Application web de décision énergétique pour les gestionnaire immobilier
+                </h3>
+              </div>
+            </a>
+
+            <a
+              class="project-card project-card--link"
+              href="projects/ged"
+              aria-label="Voir le projet : Projet application de Gestion Électronique de Document"
+            >
+              <img
+                class="project-card__image"
+                src="assets/images/projects/ged.png"
+                alt="Projet application de Gestion Électronique de Document"
+                width="560"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="project-card__body">
+                <h3 class="project-card__title">
+                  Application web de Gestion Électronique de Document (GED) pour les TPE / PME
+                </h3>
+              </div>
+            </a>
+
+            <a
+              class="project-card project-card--link"
+              href="projects/autogest"
+              aria-label="Voir le projet : Projet application web de suivi administratif"
+            >
+              <img
+                class="project-card__image"
+                src="assets/images/projects/autogest.png"
+                alt="Projet application web de suivi administratif"
+                width="560"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="project-card__body">
+                <h3 class="project-card__title">
+                  Application web de suivi et de gestion administrative pour micro-entrepreneur
+                </h3>
+              </div>
+            </a>
+
+
+            <a
+              class="project-card project-card--link"
+              href="projects/les-nuits-de-montseveroux"
+              aria-label="Voir le projet : Projet site web et billetterie pour festival"
+            >
+              <img
+                class="project-card__image"
+                src="assets/images/projects/les-nuits-de-montseveroux.png"
+                alt="Projet site web et billetterie pour festival"
+                width="560"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="project-card__body">
+                <h3 class="project-card__title">
+                  Site web et billetterie d’un festival pour une association
+                </h3>
+              </div>
+            </a>
+
+
+            <a
+              class="project-card project-card--link"
+              href="projects/guitare-connectee"
+              aria-label="Voir le projet : Projet guitare connectée et application mobile"
+            >
+              <img
+                class="project-card__image"
+                src="assets/images/projects/guitare-connectee.jpeg"
+                alt="Projet guitare connectée et application mobile"
+                width="560"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="project-card__body">
+                <h3 class="project-card__title">
+                  Guitare connectée avec contrôleur d’effet et application mobile
+                </h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="section" id="services" aria-labelledby="services-title">
+        <div class="container">
+          <header class="section-header">
+            <h2 id="services-title" class="section-title">Services</h2>
+          </header>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <div class="service-card__icon" aria-hidden="true">
+                <img src="assets/icons/service-audit.svg" alt="" width="44" height="44" loading="lazy" />
+              </div>
+              <div class="service-card__content">
+                <h3 class="service-card__title">Audit produit &amp; technique</h3>
+                <p class="service-card__desc">J’analyser votre solution existante en détail</p>
+                <ul class="service-card__list">
+                  <li>Évaluation technique</li>
+                  <li>Review UX / UI et logique produit</li>
+                  <li>Recommandations concrètes et priorisées</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-card__icon" aria-hidden="true">
+                <img src="assets/icons/service-conception.svg" alt="" width="44" height="44" loading="lazy" />
+              </div>
+              <div class="service-card__content">
+                <h3 class="service-card__title">Conception de produit digital</h3>
+                <p class="service-card__desc">
+                  Je conçois la première version de votre produit à partir de vos idées
+                </p>
+                <ul class="service-card__list">
+                  <li>Cadrage</li>
+                  <li>Développement</li>
+                  <li>Mise en ligne</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-card__icon" aria-hidden="true">
+                <img src="assets/icons/service-evolution.svg" alt="" width="44" height="44" loading="lazy" />
+              </div>
+              <div class="service-card__content">
+                <h3 class="service-card__title">Évolution de 1ère version</h3>
+                <p class="service-card__desc">
+                  J’améliore la solution pour augmenter les résultats et préparer la croissance
+                </p>
+                <ul class="service-card__list">
+                  <li>Amélioration de l’expérience utilisateur</li>
+                  <li>Ajout de fonctionnalités</li>
+                  <li>Structuration technique</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="section section--white" id="process" aria-labelledby="process-title">
+        <div class="container process">
+          <header class="section-header">
+            <h2 id="process-title" class="section-title">Comment ça fonctionne ?</h2>
+          </header>
+
+          <ol class="process-steps">
+            <li class="process-step">
+              <div class="process-step__illustration">
+                <img src="assets/images/process/1.png" alt="" width="240" height="140" loading="lazy" />
+              </div>
+              <div class="process-step__content">
+                <h3 class="process-step__title"><span class="step-number">1</span> Identification des compétences</h3>
+                <p class="process-step__meta">15 min au téléphone</p>
+                <p class="process-step__desc">
+                  Je vous dis si je peux répondre à votre besoin, ou pas.
+                </p>
+              </div>
+            </li>
+
+            <li class="process-step">
+              <div class="process-step__illustration">
+                <img src="assets/images/process/2.png" alt="" width="240" height="140" loading="lazy" />
+              </div>
+              <div class="process-step__content">
+                <h3 class="process-step__title"><span class="step-number">2</span> Compréhension du besoin</h3>
+                <p class="process-step__meta">1 heure en visio</p>
+                <p class="process-step__desc">
+                  Je comprends vos objectifs, vos utilisateurs, vos contraintes.
+                </p>
+              </div>
+            </li>
+
+            <li class="process-step">
+              <div class="process-step__illustration">
+                <img src="assets/images/process/3.png" alt="" width="240" height="140" loading="lazy" />
+              </div>
+              <div class="process-step__content">
+                <h3 class="process-step__title"><span class="step-number">3</span> Validation de la direction</h3>
+                <p class="process-step__meta">1 semaine après</p>
+                <p class="process-step__desc">
+                  Je rédige une cahier des charges et on le valide avec un aller-retour.
+                </p>
+              </div>
+            </li>
+
+            <li class="process-step">
+              <div class="process-step__illustration">
+                <img src="assets/images/process/4.png" alt="" width="240" height="140" loading="lazy" />
+              </div>
+              <div class="process-step__content">
+                <h3 class="process-step__title"><span class="step-number">4</span> Développement par itérations</h3>
+                <p class="process-step__meta">Point d’avancement toutes les 2 semaines</p>
+                <p class="process-step__desc">
+                  Je développe votre produit et on organise des démo et points d’avancement pour ajuster vos besoins au 2 semaine.
+                </p>
+              </div>
+            </li>
+
+            <li class="process-step">
+              <div class="process-step__illustration">
+                <img src="assets/images/process/5.png" alt="" width="240" height="140" loading="lazy" />
+              </div>
+              <div class="process-step__content">
+                <h3 class="process-step__title"><span class="step-number">5</span> Mise en ligne &amp; accompagnement</h3>
+                <p class="process-step__meta"></p>
+                <p class="process-step__desc">
+                  Je livre, met en production et assure la maintenance dans le temps selon vos besoins.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section" id="faq" aria-labelledby="faq-title">
+        <div class="container faq">
+          <header class="section-header">
+            <h2 id="faq-title" class="section-title">FAQ</h2>
+          </header>
+
+          <div class="faq-list" role="list">
+            <article class="faq-item" role="listitem">
+              <h3>
+                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-panel-1" id="faq-button-1">
+                  <span>Combien de temps prend un projet ?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="faq-answer" id="faq-panel-1" role="region" aria-labelledby="faq-button-1" hidden>
+                <p>
+                  Tout dépend de la complexité, il peut prendre 1 jour pour un site vitrine ou une application très simple à plusieurs mois pour une application métier spécifique.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item" role="listitem">
+              <h3>
+                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-panel-2" id="faq-button-2">
+                  <span>Travaillez-vous avec des non-techniciens ?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="faq-answer" id="faq-panel-2" role="region" aria-labelledby="faq-button-2" hidden>
+                <p>
+                  Oui, j’ai l’habitude de travailler avec et pour des personnes qui ne connaissent pas le métier mais qui me transmette le besoin.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item" role="listitem">
+              <h3>
+                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-panel-3" id="faq-button-3">
+                  <span>Pouvez-vous reprendre un projet existant ?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="faq-answer" id="faq-panel-3" role="region" aria-labelledby="faq-button-3" hidden>
+                <p>
+                  Oui, je conseil un audit en amont pour identifier la complexité et l’état du projet.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item" role="listitem">
+              <h3>
+                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-panel-4" id="faq-button-4">
+                  <span>Aidez-vous à clarifier une idée floue ?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="faq-answer" id="faq-panel-4" role="region" aria-labelledby="faq-button-4" hidden>
+                <p>
+                  Oui, avec ma vision produits, nous pouvons effectuer un travail ensemble sur la cible utilisateur, les personas afin de creuser et valider le concept.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item" role="listitem">
+              <h3>
+                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-panel-5" id="faq-button-5">
+                  <span>Intervenez-vous aussi sur la partie UX / UI ?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="faq-answer" id="faq-panel-5" role="region" aria-labelledby="faq-button-5" hidden>
+                <p>
+                  Oui, je peux effectuer des maquettes et définir des flow utilisateur sur des produits simple. S’il y a plus de complexité je collabore avec un designer.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item" role="listitem">
+              <h3>
+                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-panel-6" id="faq-button-6">
+                  <span>Proposez-vous de la maintenance après livraison ?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="faq-answer" id="faq-panel-6" role="region" aria-labelledby="faq-button-6" hidden>
+                <p>
+                  Oui, si vous souhaitez que je gère l’hébergement de votre projet je garantit la maintenance en fonction de votre besoin.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item" role="listitem">
+              <h3>
+                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-panel-7" id="faq-button-7">
+                  <span>Comment sont définis les tarifs ?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="faq-answer" id="faq-panel-7" role="region" aria-labelledby="faq-button-7" hidden>
+                <p>
+                  Une estimation du temps à passer est définis après le 1er rendez-vous et ensuite c’est un prorata de mon TJM (Taux Journalier Moyen).
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section section--white" id="contact" aria-labelledby="contact-title">
+        <div class="container contact">
+          <header class="section-header">
+            <h2 id="contact-title" class="section-title">Contact</h2>
+          </header>
+
+          <form
+            class="contact-form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify
+            netlify-honeypot="bot-field"
+            action="/merci/"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="sr-only">
+              <label>Ne pas remplir ce champ si vous êtes humain : <input name="bot-field" /></label>
+            </p>
+
+            <div class="form-field">
+              <label for="contact-name" class="sr-only">Prénom Nom</label>
+              <input
+                id="contact-name"
+                name="name"
+                type="text"
+                placeholder="Prénom Nom"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="contact-email" class="sr-only">Email</label>
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                placeholder="Email"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="contact-phone" class="sr-only">Téléphone</label>
+              <input
+                id="contact-phone"
+                name="phone"
+                type="tel"
+                placeholder="Téléphone"
+                autocomplete="tel"
+              />
+            </div>
+
+            <div class="form-field form-field--textarea">
+              <label for="contact-message" class="sr-only">Votre projet en 2 lignes</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows="5"
+                placeholder="Votre projet en 2 lignes"
+                required
+              ></textarea>
+            </div>
+
+            <a class="button button--primary contact-form__submit" type="submit">
+              Envoyer
+            </a>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <small>© 2026 Lbee Développement. Tous droits réservés.</small>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        'use strict';
+
+        // Mobile menu
+        const header = document.querySelector('.site-header');
+        const navToggle = document.querySelector('.nav-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-nav a');
+
+        if (navToggle && mobileMenu) {
+          const toggleMenu = (forceOpen) => {
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+            const shouldOpen = typeof forceOpen === 'boolean' ? forceOpen : !isExpanded;
+
+            navToggle.setAttribute('aria-expanded', String(shouldOpen));
+            navToggle.setAttribute('aria-label', shouldOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+            mobileMenu.hidden = !shouldOpen;
+            header.classList.toggle('is-menu-open', shouldOpen);
+            document.body.classList.toggle('menu-open', shouldOpen);
+          };
+
+          navToggle.addEventListener('click', () => toggleMenu());
+
+          mobileLinks.forEach((link) => {
+            link.addEventListener('click', () => toggleMenu(false));
+          });
+
+          document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+              toggleMenu(false);
+            }
+          });
         }
 
-        body {
-            font-family: "Sora", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            flex-direction: column;
-        }
+        // FAQ accordion (one open at a time)
+        const faqButtons = Array.from(document.querySelectorAll('.faq-question'));
 
-        h1 {
-            margin: 0;
-            font-weight: 800;
-            /* Responsive: s’adapte à l’écran */
-            font-size: clamp(2.5rem, 8vw, 7rem);
-            line-height: 1.05;
-            letter-spacing: -0.05em;
-        }
-    </style>
-</head>
+        const closeFaqItem = (button) => {
+          const panelId = button.getAttribute('aria-controls');
+          const panel = panelId ? document.getElementById(panelId) : null;
+          button.setAttribute('aria-expanded', 'false');
+          if (panel) panel.hidden = true;
+          button.closest('.faq-item')?.classList.remove('is-open');
+        };
 
-<body>
-<h1>Lbee développement</h1>
-<p>Site en cours de création</p>
-</body>
+        const openFaqItem = (button) => {
+          const panelId = button.getAttribute('aria-controls');
+          const panel = panelId ? document.getElementById(panelId) : null;
+          button.setAttribute('aria-expanded', 'true');
+          if (panel) panel.hidden = false;
+          button.closest('.faq-item')?.classList.add('is-open');
+        };
+
+        faqButtons.forEach((button) => {
+          closeFaqItem(button);
+
+          button.addEventListener('click', () => {
+            const isOpen = button.getAttribute('aria-expanded') === 'true';
+
+            faqButtons.forEach((otherButton) => {
+              if (otherButton !== button) closeFaqItem(otherButton);
+            });
+
+            if (isOpen) {
+              closeFaqItem(button);
+            } else {
+              openFaqItem(button);
+            }
+          });
+        });
+
+        // Smooth close mobile menu on desktop resize
+        const mediaDesktop = window.matchMedia('(min-width: 900px)');
+        const handleDesktopChange = (e) => {
+          if (e.matches && navToggle && mobileMenu) {
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.setAttribute('aria-label', 'Ouvrir le menu');
+            mobileMenu.hidden = true;
+            header?.classList.remove('is-menu-open');
+            document.body.classList.remove('menu-open');
+          }
+        };
+
+        if (typeof mediaDesktop.addEventListener === 'function') {
+          mediaDesktop.addEventListener('change', handleDesktopChange);
+        } else if (typeof mediaDesktop.addListener === 'function') {
+          mediaDesktop.addListener(handleDesktopChange);
+        }
+      })();
+    </script>
+  </body>
 </html>
