@@ -265,6 +265,7 @@ h1, h2, h3, p, ul {
 .project-content {
   padding-top: 36px;
   padding-bottom: 84px;
+  background: #f7f5fa;
 }
 
 .project-sections {
@@ -301,7 +302,6 @@ h1, h2, h3, p, ul {
 
 .site-footer {
   padding-block: 22px 28px;
-  border-top: 1px solid rgba(223, 210, 247, 0.6);
 }
 
 .site-footer__inner {
