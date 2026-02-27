@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Merci | Lbee Développement</title>
+    <meta
+      name="description"
+      content="Merci pour votre message. Nous vous recontacterons dans les plus brefs délais."
+    />
+    <meta name="robots" content="noindex,follow" />
+    <link rel="canonical" href="https://example.com/merci/" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Reuse main styles -->
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
+
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="../index.html" aria-label="Retour à l'accueil">Lbee Développement</a>
+
+        <nav class="site-nav" aria-label="Navigation principale">
+          <ul class="nav-list">
+            <li><a href="../index.html#experiences">Expériences &amp; projets</a></li>
+            <li><a href="../index.html#services">Services</a></li>
+            <li><a href="../index.html#process">Comment ça fonctionne ?</a></li>
+            <li><a href="../index.html#faq">FAQ</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Ouvrir le menu"
+        >
+          <span class="nav-toggle__line"></span>
+          <span class="nav-toggle__line"></span>
+          <span class="nav-toggle__line"></span>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="mobile-menu" hidden>
+        <nav class="mobile-nav container" aria-label="Navigation mobile">
+          <ul class="mobile-nav-list">
+            <li><a href="../index.html#experiences">Expériences &amp; projets</a></li>
+            <li><a href="../index.html#services">Services</a></li>
+            <li><a href="../index.html#process">Comment ça fonctionne ?</a></li>
+            <li><a href="../index.html#faq">FAQ</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="thankyou-page">
+      <section class="thankyou">
+        <div class="container thankyou__inner">
+          <p class="thankyou__text">
+            Merci pour votre projet, nous vous recontacterons dans les plus brefs délais
+          </p>
+
+          <a class="button button--primary thankyou__cta" href="../index.html">
+            Retourner au site
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <small>© 2026 Lbee Développement. Tous droits réservés.</small>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        'use strict';
+
+        const header = document.querySelector('.site-header');
+        const navToggle = document.querySelector('.nav-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-nav a');
+
+        if (navToggle && mobileMenu) {
+          const toggleMenu = (forceOpen) => {
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+            const shouldOpen = typeof forceOpen === 'boolean' ? forceOpen : !isExpanded;
+
+            navToggle.setAttribute('aria-expanded', String(shouldOpen));
+            navToggle.setAttribute('aria-label', shouldOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+            mobileMenu.hidden = !shouldOpen;
+            header.classList.toggle('is-menu-open', shouldOpen);
+            document.body.classList.toggle('menu-open', shouldOpen);
+          };
+
+          navToggle.addEventListener('click', () => toggleMenu());
+
+          mobileLinks.forEach((link) => {
+            link.addEventListener('click', () => toggleMenu(false));
+          });
+
+          document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') toggleMenu(false);
+          });
+
+          const mediaDesktop = window.matchMedia('(min-width: 900px)');
+          const handleDesktopChange = (e) => {
+            if (e.matches) toggleMenu(false);
+          };
+
+          if (typeof mediaDesktop.addEventListener === 'function') {
+            mediaDesktop.addEventListener('change', handleDesktopChange);
+          } else if (typeof mediaDesktop.addListener === 'function') {
+            mediaDesktop.addListener(handleDesktopChange);
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
