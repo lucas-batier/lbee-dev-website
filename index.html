@@ -265,8 +265,8 @@
                 <img src="assets/icons/service-audit.svg" alt="" width="44" height="44" loading="lazy" />
               </div>
               <div class="service-card__content">
-                <h3 class="service-card__title">Audit produit &amp; technique</h3>
-                <p class="service-card__desc">J’analyser votre solution existante en détail</p>
+                <h3 class="service-card__title">Audit</h3>
+                <p class="service-card__desc">J’analyse votre produit en détail et je vous donne les axes d'améliorations</p>
                 <ul class="service-card__list">
                   <li>Évaluation technique</li>
                   <li>Review UX / UI et logique produit</li>
@@ -280,9 +280,9 @@
                 <img src="assets/icons/service-conception.svg" alt="" width="44" height="44" loading="lazy" />
               </div>
               <div class="service-card__content">
-                <h3 class="service-card__title">Conception de produit digital</h3>
+                <h3 class="service-card__title">Conception</h3>
                 <p class="service-card__desc">
-                  Je conçois la première version de votre produit à partir de vos idées
+                  Je conçois votre produit à partir de vos idées
                 </p>
                 <ul class="service-card__list">
                   <li>Cadrage</li>
@@ -297,9 +297,9 @@
                 <img src="assets/icons/service-evolution.svg" alt="" width="44" height="44" loading="lazy" />
               </div>
               <div class="service-card__content">
-                <h3 class="service-card__title">Évolution de 1ère version</h3>
+                <h3 class="service-card__title">Amélioration</h3>
                 <p class="service-card__desc">
-                  J’améliore la solution pour augmenter les résultats et préparer la croissance
+                  J’améliore votre produit pour augmenter les résultats et préparer la croissance
                 </p>
                 <ul class="service-card__list">
                   <li>Amélioration de l’expérience utilisateur</li>
@@ -508,10 +508,7 @@
             class="contact-form"
             name="contact"
             method="POST"
-            data-netlify="true"
             netlify
-            netlify-honeypot="bot-field"
-            action="/merci/"
           >
             <input type="hidden" name="form-name" value="contact" />
             <p class="sr-only">
@@ -550,6 +547,7 @@
                 type="tel"
                 placeholder="Téléphone"
                 autocomplete="tel"
+                required
               />
             </div>
 
@@ -564,9 +562,9 @@
               ></textarea>
             </div>
 
-            <a class="button button--primary contact-form__submit" type="submit">
+            <button class="button button--primary contact-form__submit" type="submit">
               Envoyer
-            </a>
+            </button>
           </form>
         </div>
       </section>
