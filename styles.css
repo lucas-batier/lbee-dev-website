@@ -718,6 +718,49 @@ ol {
   line-height: 1.35;
 }
 
+/* =========================
+   Thank you page (/merci/)
+   ========================= */
+
+.thankyou-page {
+  min-height: calc(100dvh - var(--header-height-mobile));
+  display: grid;
+  align-items: center;
+}
+
+.thankyou {
+  padding-block: 64px;
+}
+
+.thankyou__inner {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 22px;
+  max-width: 760px;
+}
+
+.thankyou__text {
+  font-family: var(--font-body);
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+}
+
+.thankyou__cta {
+  min-width: 220px;
+}
+
+/* Desktop adjustment to keep vertical centering perfect with desktop header height */
+@media (min-width: 900px) {
+  .thankyou-page {
+    min-height: calc(100dvh - var(--header-height-desktop));
+  }
+
+  .thankyou {
+    padding-block: 80px;
+  }
+}
+
 /* ---------- Desktop (>=900px) ---------- */
 @media (min-width: 900px) {
   html {
