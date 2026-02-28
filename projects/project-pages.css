@@ -110,8 +110,8 @@ h1, h2, h3, p, ul {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(243, 238, 248, 0.92);
-  backdrop-filter: saturate(140%) blur(10px);
+  background: rgba(243, 238, 248, 0.6);
+  backdrop-filter: blur(40px);
 }
 
 .header-inner {

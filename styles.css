@@ -207,10 +207,8 @@ ol {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(243, 238, 248, 0.92);
-  backdrop-filter: saturate(140%) blur(10px);
-  border-bottom: 1px solid transparent;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  background: rgba(243, 238, 248, 0.6);
+  backdrop-filter: blur(40px);
 }
 
 .site-header.is-menu-open {
