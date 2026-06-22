@@ -704,6 +704,22 @@
         } else if (typeof mediaDesktop.addListener === 'function') {
           mediaDesktop.addListener(handleDesktopChange);
         }
+
+        // "Back to top" links target #top, which is the sticky header. Native
+        // anchor scrolling lands ~90px short (scroll-padding-top) because the
+        // header is already pinned to the viewport top, so scroll explicitly.
+        const topLinks = document.querySelectorAll('a[href="#top"]');
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+        topLinks.forEach((link) => {
+          link.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.scrollTo({
+              top: 0,
+              behavior: reduceMotion.matches ? 'auto' : 'smooth',
+            });
+          });
+        });
       })();
     </script>
   </body>
